@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            HTML Canvas Circle Examples
+        </title>
+    </head>
+    <body>
+        <h1>HTML canvas circle example</h1>
+        <canvas id="mycanvas" width="200" height="200">
+            <script>
+                var canvas = document.getElementById("mycanvas");
+                var ctx = canvas.getContext("2d")
+
+                var centerX = canvas.width/2;
+                var centery = canvas.height/2;
+                var radius = 50;
+                var fillcolor = "blue"
+                ctx.beginPath();
+                ctx.arc(centerX,centery,radius,0,2*Math.PI);
+                ctx.fillStyle = fillcolor;
+                ctx.fill();
+                ctx.closePath();
+            </script>
+        </canvas>
+    </body>
+</html>
